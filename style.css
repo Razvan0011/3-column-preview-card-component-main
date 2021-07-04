@@ -1,0 +1,144 @@
+:root {
+    /* Primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+    --very-light-gray: hsl(0, 0%, 95%) /* background, headings, buttons */
+}
+
+/* font-family: 'Big Shoulders Display', cursive; */
+/*  font-family: 'Lexend Deca', sans-serif; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: 15px;
+}
+
+/* General  ----------------------------------------------- */
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--very-light-gray);
+    font-size: 35px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--transparent-white);
+    line-height: 25px;
+}
+button {
+    font-family: 'Lexend Deca', sans-serif;
+    background: var(--very-light-gray);
+    padding: 13px 30px;
+    border: 2px solid var(--very-light-gray);
+    border-radius: 50px; 
+}
+/* Button container */
+.button-container {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+/* Cards */
+.card {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 310px;
+    height: 500px;
+}
+
+/* Button font colors */
+#sedans-btn {
+    color: var(--bright-orange);
+}
+#suvs-btn {
+    color: var(--dark-cyan);
+}
+#luxury-btn {
+    color: var(--very-dark-cyan);
+}
+
+/* Sedans card */
+#sedans {
+    background: var(--bright-orange);
+}
+
+/* Suvs card */
+#suvs {
+    background: var(--dark-cyan);
+}
+
+/* Luxury card */
+#luxury {
+    background: var(--very-dark-cyan);
+}
+
+/* Hover State */
+#sedans-btn:hover, #suvs-btn:hover, #luxury-btn:hover  {
+    cursor: pointer;
+    background: none;
+    color: var(--very-light-gray);
+}
+
+/* General End ---------------------------------------------- */
+
+/* Desktop */
+@media screen and (min-width: 900px) {
+    /* Main */
+    .main {
+        height: 100vh;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Sedans card */
+    #sedans {
+        border-radius: 10px 0 0 10px;
+    }
+    /* Luxury card */
+    #luxury {
+        border-radius: 0 10px 10px 0;
+    }
+
+}
+/* Desktop End ----------------------------------------------- */
+
+/* Mobile */
+@media screen and (max-width: 800px) {
+    /* Main */
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+
+    /* Sedans card */
+    #sedans {
+        border-radius: 10px 10px 0 0;
+    }
+    /* Luxury card */
+    #luxury {
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+
+
+
